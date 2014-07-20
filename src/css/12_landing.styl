@@ -1,0 +1,143 @@
+@import '00_variables.styl'
+@import 'nib'
+
+#landing-container
+    display block
+    position relative
+    padding 0
+    width auto
+    height 100%
+    transition height $transition
+    z-index 100
+    overflow visible
+    .landing-nav
+        position absolute
+        bottom 40px
+        left 50%
+        margin-left -92px
+        z-index 2
+        a
+            color white
+            margin 0 5px
+            font-size 17px
+            i
+                font-weight 900
+    video
+        position absolute
+        z-index -1
+        background black
+    section
+        display block
+        position absolute
+        left 0
+        width 100%
+        height 100%
+        overflow hidden
+    .volume-controls
+        font-size 21px
+        line-height 40px
+        color rgba(255,255,255,0.8)
+        -webkit-font-smoothing antialiased
+        position absolute
+        text-align right
+        padding-right 18px
+        right 0
+        top 8px
+        z-index 3
+        cursor pointer
+    .copy-container
+        display block
+        position absolute
+        z-index 2
+        top 0
+        width 100%
+        height 100%
+        min-height 200px
+    .copy
+        display block
+        position absolute
+        z-index 1
+        top 10%
+        left 0
+        width 100%
+        padding 20px
+        text-align center
+        color white
+        text-shadow 1px 1px 1px #000
+        .lead-title
+            font-size 8em
+            font-weight 100
+        p
+            max-width 550px
+            margin 0 auto
+            font-family "FF Tisa"
+            font-style italic
+            font-size 1.2em
+            line-height 1.6875
+            font-weight 300
+        strong
+            font-size 4.2em
+            font-weight 100
+        .btn
+            position relative
+            margin 20px 10px 0 0
+            display inline-block
+            padding-right 40px
+            color white
+            i
+                position absolute
+                top 0
+                right 0
+                bottom 0
+                width 30px
+                background white
+                color #444
+                font-size 25px
+                line-height 14px
+                padding-top 14px
+                text-shadow none
+    .hero
+        .copy
+            text-shadow none
+    .prescribe
+        left -100%
+    .subscribe
+        left -200%
+    .collect-share
+        left -300%
+    .listen-discover
+        left -400%
+        .copy
+            color #444
+            text-shadow none
+        .btn
+            color #444
+            border-color #444
+            i
+                background #444
+                color white
+        .volume-controls
+            color #444
+    .open-development
+        left -500%
+
+@media (max-width: 767px)
+    #landing-container
+        .landing-nav a
+        .copy
+        .copy .btn
+            color #444
+        .copy
+            text-shadow none
+            strong
+                font-size 2.5em
+            .btn
+                border-color #444
+                i
+                    background #444
+                    color white
+        section
+            background white
+        video
+        .volume-controls
+            display none

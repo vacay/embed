@@ -1,0 +1,146 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.statusbar-container
+    display none
+    position absolute
+    width 100%
+    line-height 0
+    canvas
+        position absolute
+        opacity 0
+        bottom -15px
+        margin-bottom 0
+        cursor crosshair
+    .statusbar
+        position relative
+        height 1px
+        background-color rgba(200, 200, 200, 1)
+        overflow hidden
+        cursor -moz-grab
+        cursor grab
+    &:hover
+        canvas
+            opacity .7
+    &.dragging
+        .statusbar
+            cursor -moz-grabbing
+            cursor grabbing
+
+.playing.statusbar-container
+.paused.statusbar-container
+    display block
+
+.statusbar .position
+.statusbar .loading
+    position absolute
+    left 0
+    top 0
+    height 1px
+
+.statusbar .position
+    background-color $yellow
+
+.paused.statusbar-container .statusbar .position
+    background-color $red
+
+.statusbar .loading
+    background-color $grey
+
+.statusbar .position
+.statusbar .loading
+    width 0
+
+.player-progress-container
+    position fixed
+    top 0
+    left 0
+    right 0
+    height 4px
+    z-index 10
+    .statusbar-container
+        top 0px
+        height 4px
+        .statusbar
+        .statusbar .position
+        .statusbar .loading
+            height 4px
+
+.player-container
+    position fixed
+    top 0
+    right -22.5%
+    bottom 0
+    height 100%
+    width 22.5%
+    z-index 4
+    overflow hidden
+    background #fcfcfc
+    border-left 1px solid $border
+
+.show-player .player-container
+    right 0
+
+.menu-open .player-container
+    transform translateX(100px)
+
+@media (max-width: 767px)
+    .player-container
+        display none
+        left 0
+        top 100%
+        bottom auto
+        width 100%
+        margin-top -50px
+        border-left none
+        border-top 1px solid $border
+    
+    .show-player .player-container
+        display block
+
+    .show-queue .player-container
+        top 0
+        margin-top 0
+
+    .menu-open .player-container
+        transform translateX(280px)
+
+.now-playing-container
+    padding 20px 5px 5px
+    border-bottom 1px solid $border
+    text-align center
+
+.queue-btn
+    display none
+
+.queue-btn .close
+    display none
+
+.show-queue
+    .queue-count
+        display none
+    .close
+        display block
+
+.queue-container
+    height 100%
+    padding 0 10px 120px
+    overflow-y scroll
+    overflow-x hidden
+
+.player-controls
+    display block
+    width 100%
+    .play
+        font-size 20px
+
+.controls
+    line-height 20px
+    vertical-align top
+    display inline-block
+    i
+        vertical-align middle
+        line-height 30px
+
+.controls + .controls
+    margin-left 20px

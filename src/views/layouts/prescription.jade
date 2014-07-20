@@ -1,0 +1,15 @@
+.prescription.cf
+
+    .prescription-header
+        .now-playing-container(ng-controller="NowPlayingCtrl")
+
+            .vitamin(vitamin, template-url="/layouts/now-playing.html")
+
+    table.table
+        tbody
+            tr.vitamin(ng-repeat="vitamin in prescription.vitamins track by $index", vitamin, ng-class="{editable: editable}", ng-repeat-reorder, id="prescription-{{prescription.id}}-vitamin-{{$index}}", ng-show="$index < 5 || showAll")
+
+    .actions.prescription-footer
+        em.meta(ng-bind="prescription.vitamins.length + ' Vitamins'")
+        em.meta(ng-bind="prescription.published_at || prescription.created_at | fromNow")
+

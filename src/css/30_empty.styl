@@ -1,0 +1,18 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.empty-container
+    text-align center
+    padding 20px 0
+    font-size 14px
+    &:before
+        content ""
+        display inline-block
+        width 70px
+        margin-bottom 10px
+        border-top 1px solid $border
+
+.table tr.empty td
+    display block
+    width 100%
+    text-align center

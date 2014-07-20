@@ -1,0 +1,84 @@
+@import '00_variables.styl'
+@import 'nib'
+
+$progressBarWidth = 10 // % (for the OCD amoung us)
+
+$progressBarAcutalWidth = $progressBarWidth / 100
+$progressBarCalculatedWidth = $progressBarAcutalWidth em
+
+.ngProgress-container
+    position relative
+    width 100%
+    margin 0
+    padding 0
+    margin-top -4px
+
+.ngProgress
+    margin 0
+    padding 0
+    background-color $yellow
+    color $grey
+    height 4px
+    width 0%
+    transition all .5s ease-in-out
+
+div.co-circle-progress
+    position relative
+    width 1em
+    height 1em
+    font-size 20px
+    display inline-block
+    vertical-align middle
+    margin 0 10px
+    div.co-circle
+        position absolute
+        top 0
+        left 0
+        border-radius 0.5em
+        background transparent
+        border $progressBarCalculatedWidth solid
+        width 1em
+        height 1em
+
+div.co-circle-progress > div.co-progress
+    position absolute
+    width 1em
+    height 1em
+    background transparent
+    clip rect(0px, 1em, 1em, 0.5em)
+
+div.co-circle-progress > div.co-progress > div
+    border-color $yellow
+    clip rect(0em, 0.5em, 1em, 0em)
+    transition transform 0.3s linear
+
+div.co-circle-progress > div.co-progress > div.filled
+    display none
+    transform rotate(180deg)
+
+div.co-circle-progress > div.co-progress.gt50
+    clip rect(auto, auto, auto, auto)
+
+div.co-circle-progress > div.co-progress.gt50 > div.filled
+    display block
+
+div.co-circle-progress > div.circle-content
+    position absolute
+    height 1em
+    width 1em
+    line-height 1em
+
+div.co-circle-progress > div.circle-content > div
+    display table-row
+    width 1em
+    height 1em
+
+div.co-circle-progress > div.circle-content > div > div
+    display table-cell
+    vertical-align middle
+    text-align center
+    width 1em
+
+div.co-circle-progress > div.circle-content > div > div > div
+    vertical-align top
+    font-size .5em

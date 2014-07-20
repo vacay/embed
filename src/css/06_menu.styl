@@ -1,0 +1,130 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.menu-container
+    width 100%
+    &.vertical
+        width auto
+
+.menu
+    padding 0
+    margin 0
+    display block
+
+.vertical .menu
+.center .menu
+    text-align center
+
+.justified .menu
+    width 100%
+    display table
+
+.horizontal .menu
+    border-bottom 1px solid $border
+
+.menu-item
+    position relative
+    display inline-block
+    padding 7px 10px
+    color $text-light
+    cursor pointer
+    &.selected
+        color $grey
+        border-bottom 1px solid $grey
+
+.vertical .menu-item
+    display block
+    padding 0
+    &:first-child
+        margin-top 0
+    &:last-child
+        margin-bottom 14px
+
+.dark .menu-item
+    &.selected
+        color $yellow
+
+.auth-menu .menu-item
+    font-size 22px
+    font-style italic
+    font-family "FF Tisa"
+    text-transform lowercase
+    font-weight 400
+
+.justified .menu-item
+    display table-cell
+    width 1%
+
+.menu-item-btn
+    text-transform lowercase
+    display block
+
+.main .menu-item-btn
+    font-weight 500
+    padding 0 16px 0 52px
+    height 42px
+    line-height 45px
+    font-size 14px
+    .icons
+        font-size 20px
+        display block
+        position absolute
+        left 18px
+        top -1px
+        width 20px
+        text-align center
+
+.main .menu-item-btn-secondary
+    position absolute
+    right 0
+    top 0
+    bottom 0
+    padding 0 16px 0 6px
+    .icons
+        line-height 46px
+        font-size 20px
+
+.main-menu-btn
+    position fixed
+    top 20px
+    left 20px
+    z-index 3
+    width 35px
+    height 35px
+    background #666
+    color white
+    transition opacity .3s linear .3s
+    opacity 0
+    &.visible
+        opacity 1
+
+@media (max-width: 767px)
+    .main-menu-btn
+        left 5%
+
+body.menu-open .main-menu-btn
+    display none
+
+.landing-active .main-menu-btn
+    display none
+
+@media (max-width: 767px)
+    .landing-active .main-menu-btn
+        display block
+
+.main-menu-container
+    position fixed
+    left 0
+    top 0
+    bottom 0
+    padding-top 20px
+    width 280px
+    background #191918
+
+.footer-menu-container
+    position absolute
+    bottom 0
+    border-top 1px solid #333
+    left 10px
+    right 10px
+    margin 0

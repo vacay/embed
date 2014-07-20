@@ -1,0 +1,9 @@
+.container(ng-show="loaded")
+    .lead
+        block lead
+
+.container(infinite-scroll="load()", infinite-scroll-disabled="loading || noMore", ng-show="loaded")
+    block river
+
+.container.footer
+    block footer

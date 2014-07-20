@@ -1,0 +1,59 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.btn
+    cursor pointer
+    border 1px solid $btn-border
+    border-radius 2px
+    padding 10px
+    display inline-block
+    background transparent
+    background-image none
+    color $text
+    &:disabled
+        cursor not-allowed
+        pointer-events none
+        opacity .5
+    &.btn-light
+        background $border
+    &.btn-link
+        background transparent
+        border-color transparent
+        font-weight 500
+        padding 0
+    &.active
+        background $active
+        border-color $active
+        color white
+    i
+        font-size 14px
+
+.btn + .btn
+    margin-left 5px
+
+.btn-xs
+    padding 0 5px
+    font-size .8em
+    border-radius 3px
+
+.btn-sm
+    padding 5px 10px
+    font-size 12px
+    line-height 1.5
+
+.btn-group .btn + .btn
+    margin-left -1px
+
+.btn-group > .btn:not(:first-child):not(:last-child)
+    border-radius 0
+
+.btn-group > .btn:first-child
+    margin-left 0
+
+.btn-group > .btn:first-child:not(:last-child)
+    border-top-right-radius 0
+    border-bottom-right-radius 0
+
+.btn-group > .btn:last-child:not(:first-child)
+    border-top-left-radius 0
+    border-bottom-left-radius 0

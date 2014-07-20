@@ -1,0 +1,7 @@
+.player-progress-container(ng-controller="PlayerProgressCtrl")
+
+    #statusbar-container.statusbar-container(ng-class="css")
+        canvas#waveform(height="30", width="0")
+        .statusbar
+            .loading(ng-style="loading")
+            .position(ng-style="position")

@@ -1,0 +1,35 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.avatar-container
+    position relative
+    width 95px
+    height 95px
+    min-height 0
+    margin 0 auto
+    display block
+    border-radius 1px
+    overflow hidden
+    border 1px solid #fff
+    z-index 500
+    background-color #fff
+    box-shadow 0 1px 1px rgba(0,0,0,0.3)
+    span
+        line-height 94px
+        display none
+    div
+        height 100%
+    &.placeholder
+        background $border
+    &.editable.placeholder
+        span
+            display block
+    &.editable:hover
+        opacity .3
+    img
+        width 100%
+        height 100%
+        border-radius 1px
+        background-repeat no-repeat
+        background-position center
+        background-size cover

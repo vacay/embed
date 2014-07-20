@@ -1,0 +1,34 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.title
+.sub-title
+    display inline-block
+    position relative
+
+.sub-title
+    font-size .8em
+    color $text-light
+    text-transform uppercase
+
+.title + .sub-title
+.sub-title + .sub-title
+.title > .sub-title
+    margin-left 5px
+
+.lead
+    .title
+        font-weight 100
+        font-size 3em
+        border none
+        text-align center
+        display block
+    input.title
+        text-align left
+    .sub-title
+        display block
+        text-align center
+
+@media (max-width: 767px)
+    .vitamin .sub-title //TODO: this is bad
+        display none

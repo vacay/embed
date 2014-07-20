@@ -1,0 +1,62 @@
+@import '00_variables.styl'
+@import 'nib'
+
+html
+    height 100%
+    width 100%
+    overflow hidden
+
+body
+    position relative
+    font-family "Helvetica Neue", sans-serif
+    font-weight 300
+    color $text
+    height 100%
+    overflow hidden
+    width 100%
+
+main
+    position relative
+    height 100%
+    width 100%
+    background $bg
+    z-index 1
+    overflow-y scroll
+    -webkit-overflow-scrolling touch
+    .container
+        position relative
+        width 50%
+        margin 0 auto
+    .footer
+        margin-bottom 100px
+
+form
+    position relative
+
+.platform-nodewebkit main .container
+    margin 0 25% 0 20px
+    width auto
+
+body.menu-open
+    main
+        transform translateX(280px)
+
+@media (max-width: 767px)
+    main .container
+    .platform-nodewebkit main .container
+        width 90%
+        margin 0 auto
+
+em
+    font-family "FF Tisa"
+    display inline-block
+    font-style italic
+    text-transform lowercase
+    font-weight 400
+
+a
+    color inherit
+    cursor pointer
+    &.disabled
+        pointer-events none
+        opacity .3

@@ -1,0 +1,13 @@
+@import '00_variables.styl'
+@import 'nib'
+
+body.active-drag-below
+    user-select none
+
+[ng-repeat-reorder]
+    z-index 3
+    position relative
+
+[ng-repeat-reorder].dragging
+    z-index 4
+    position absolute

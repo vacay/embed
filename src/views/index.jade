@@ -1,0 +1,10 @@
+include head
+    
+    body.ng-cloak(ng-show="initialized")
+
+        include player
+        include notification
+        main(ng-controller="PrescriptionReadCtrl")
+            prescription
+
+    include scripts

@@ -1,0 +1,45 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.vitamin
+    .reorder
+        user-select none
+        cursor row-resize
+
+.player-container .vitamin
+    .title
+        font-size .8em
+        display block
+    .sub-title
+        display none
+
+.queue-container .vitamin
+    .play
+    .crate
+    .download
+        display none
+
+.reorder
+.remove
+    display none
+
+.editable
+    .reorder
+    .remove
+        display table-cell
+
+.platform-nodewebkit .vitamin .download
+    display none
+
+@media (max-width: 767px)
+    .vitamin
+        .play
+        .queue
+        .crate
+            display none
+    .download
+        display none
+    .now-playing-container .vitamin
+        .play
+        .crate
+            display inline-block

@@ -1,0 +1,42 @@
+@import '00_variables.styl'
+@import 'nib'
+
+.comments
+    position relative
+    &:before
+        display block
+        content ""
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        width 1px
+        background-color $border
+        z-index -1
+
+.comment
+    position relative
+    margin 15px 0 15px 25px
+    color $grey
+
+.comment-content
+    padding 0
+
+.comment-body
+    position relative
+
+.comment-meta
+    font-size 10px
+    line-height 10px
+
+.comment-icon
+    background-color $border
+    background-size cover
+    float left
+    width 32px
+    height 32px
+    margin-left -40px
+    line-height 28px
+    text-align center
+    border 2px solid #fff
+    border-radius 50%

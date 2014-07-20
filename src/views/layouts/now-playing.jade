@@ -1,0 +1,12 @@
+div
+    a(ng-click="summary()")
+        span.title(ng-bind="vitamin.title")
+
+.player-controls
+    a.controls.previous(ng-click="previous()")
+        i.icon-previous-solid
+    a.controls.play(ng-click="togglePlay()", ng-switch="playing")
+        i.icon-play-solid(ng-switch-when="false")
+        i.icon-pause-solid(ng-switch-when="true")
+    a.controls.next(ng-click="next()")
+        i.icon-next-solid

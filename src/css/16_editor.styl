@@ -1,0 +1,15 @@
+@import '00_variables.styl'
+
+.editor-placeholder:after
+    position absolute
+    top 0
+    left 0
+    content attr(data-placeholder)
+    opacity .5
+
+.user-profile .editor-placeholder:after
+    width 100%
+    text-align center
+
+.editor
+    position relative

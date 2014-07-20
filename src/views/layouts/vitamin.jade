@@ -1,0 +1,10 @@
+td.play
+    a(ng-switch="isPlaying()", ng-click="play()")
+        span(ng-switch-when="false")
+            i.icon-play
+        span(ng-switch-when="true")
+            i.icon-pause
+td
+    span.title(ng-bind="vitamin.title")
+    span.sub-title(once-text="vitamin.duration | duration")
+    span.sub-title(once-text="vitamin.hosts[0].bitrate + 'kbps'", ng-show="vitamin.hosts[0].bitrate")
